@@ -7,7 +7,6 @@ interface TopicShowPageProps {
 }
 
 export default function TopicShowPage({ params }: TopicShowPageProps) {
-  console.log("TOPIC SHOW PAGE", params);
   const { slug } = params;
 
   return (
@@ -17,7 +16,7 @@ export default function TopicShowPage({ params }: TopicShowPageProps) {
       </div>
 
       <div>
-        <PostCreateForm />
+        <PostCreateForm slug={slug} />
       </div>
     </div>
   );
